@@ -1,16 +1,17 @@
-"use client"
 import { useRef, useEffect } from 'react'
+import { JSMpeg } from './jsmpeg.min.js'
 
-export const StreamPlayer = () => {
+const StreamPlayer = () => {
     
     const streamRef = useRef(null)
 
     useEffect(() => {
-        const { JSMpeg } = require('./jsmpeg.min.js')
-        const player = new JSMpeg.Player('ws://localhost:9999', {
+        new JSMpeg.Player('ws://192.168.15.30:9999', {
             canvas: streamRef.current
         })
     }, [])
 
   return <canvas ref={streamRef} id="stream-canvas"></canvas>
 }
+
+export default StreamPlayer

@@ -1,0 +1,22 @@
+/*_______ErrorPage_______*/
+@import "../../index.css";
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  height: 100%;
+  width: 100%;
+}
+
+.error_title{
+  color: var(--white);
+  font-weight: 700;
+}
+
+.error_messsage{
+  color: var(--white);
+  font-weight: 500;
+}

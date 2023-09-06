@@ -1,0 +1,14 @@
+:root{
+  --light_blue: #2667d1;
+  --blue: #042457;
+  --dark_blue: #1a1f3d;
+  --white: #f7f7f7;
+  --black: #141414;
+  --gray: #595959;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
