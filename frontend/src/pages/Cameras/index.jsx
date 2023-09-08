@@ -1,13 +1,11 @@
 import './styles.css'
-import Header from '../../components/Header/Header'
+import CameraCard from '../../components/CameraCard'
 
 const Cameras = ()=>{
   return(
     <div className="Cameras">
-      <Header/>
-      <div className="views">
-        {/*map  ->  Cameras */}
-      </div>
+      <CameraCard cameraId={'9999'}/>
+      {/* <CameraCard cameraId={'9998'}/> */}
     </div>
   )
 }

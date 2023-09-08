@@ -3,21 +3,37 @@ import * as ReactDOM from "react-dom/client";
 import Home from "./pages/Home";
 import Cameras from "./pages/Cameras"
 import ErrorPage from "./pages/Error";
+import Navbar from "./components/Navbar";
 
 import {
   createBrowserRouter,
   RouterProvider,
+  Outlet,
 } from "react-router-dom";
+
+
+const AppLayout = ()=>(
+  <>
+    <Navbar/>
+    <Outlet/>
+  </>
+)
+
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Home/>,
-    errorElement: <ErrorPage/>,
-  },
-  {
-    path: '/Cameras',
-    element: <Cameras/>
+    element: <AppLayout/>,
+    children: [
+      {
+        element: <Home/>,
+        path: '/'
+      },
+      {
+        element: <Cameras/>,
+        path: 'Cameras'
+      }
+    ],
+    errorElement: <ErrorPage/>
   }
 ]);
 
