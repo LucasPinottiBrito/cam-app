@@ -6,7 +6,6 @@ const Home = ()=>{
 
   return(
     <div className="Home">
-      <h2>HOME SCREEN</h2>
       
     </div>
   )

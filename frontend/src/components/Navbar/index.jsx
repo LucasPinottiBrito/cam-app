@@ -29,7 +29,7 @@ function Navbar() {
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">
               <Link to="#" className="menu-bars">
-                <AiIcons.AiOutlineClose />
+                <AiIcons.AiFillCaretLeft />
               </Link>
             </li>
             {SidebarData.map((item, index) => {
@@ -43,6 +43,9 @@ function Navbar() {
               );
             })}
           </ul>
+          <div className="settings_bar">
+            <AiIcons.AiFillSetting className="settings_button" onClick={()=>{console.log('Settings')}}/>
+          </div>
         </nav>
       </IconContext.Provider>
     </>

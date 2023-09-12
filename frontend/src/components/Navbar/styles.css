@@ -12,6 +12,7 @@
 
 /* Navbar CSS */
 .navbar {
+  width: 100%;
   background-color: #232323;
   height: 60px;
   display: flex;
@@ -21,9 +22,15 @@
 
 .menu-bars {
   margin-left: 1rem;
+  margin-right: 1rem;
   font-size: 2rem;
   background: none;
   color: #f7f7f7;
+  text-decoration: none;
+  transition-duration: 800ms;
+  :active{
+    opacity: 0.7;
+  }
 }
 
 .nav-menu {
@@ -36,6 +43,9 @@
   top: 0;
   left: -100%;
   transition: 850ms;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .nav-menu.active {
@@ -78,10 +88,34 @@
   width: 100%;
   height: 80px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
 }
 
 span {
   margin-left: 16px;
+}
+
+#logo{
+  width: 130px;
+  object-fit: contain;
+  margin-right: 5px;
+}
+
+.settings_bar{
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.settings_button{
+  color: #f7f7f7;
+  height: 25px;
+  width: 25px;
+  margin: 10px
 }
